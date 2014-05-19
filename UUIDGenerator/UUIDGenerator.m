@@ -10,7 +10,7 @@
 
 @implementation UUIDGenerator
 
-static NSString const *range = @"abcdefghijklmnopqrstuvwxyz0123456789";
+static NSString const *range = @"abcdef0123456789";
 static NSString const *small_range = @"89ab";
 
 - (UInt32) getRandomNum {
