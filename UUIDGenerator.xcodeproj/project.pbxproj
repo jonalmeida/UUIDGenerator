@@ -14,6 +14,7 @@
 		ABB6F76B1925B519000FC943 /* libUUIDGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB6F7521925B519000FC943 /* libUUIDGenerator.a */; };
 		ABB6F7711925B519000FC943 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABB6F76F1925B519000FC943 /* InfoPlist.strings */; };
 		ABB6F7731925B519000FC943 /* UUIDGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB6F7721925B519000FC943 /* UUIDGeneratorTests.m */; };
+		ABB6F77D1925B59D000FC943 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB6F77C1925B59D000FC943 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		ABB6F76E1925B519000FC943 /* UUIDGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UUIDGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		ABB6F7701925B519000FC943 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ABB6F7721925B519000FC943 /* UUIDGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUIDGeneratorTests.m; sourceTree = "<group>"; };
+		ABB6F77C1925B59D000FC943 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB6F77D1925B59D000FC943 /* Security.framework in Frameworks */,
 				ABB6F7561925B519000FC943 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +89,7 @@
 		ABB6F7541925B519000FC943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABB6F77C1925B59D000FC943 /* Security.framework */,
 				ABB6F7551925B519000FC943 /* Cocoa.framework */,
 				ABB6F7661925B519000FC943 /* XCTest.framework */,
 				ABB6F7571925B519000FC943 /* Other Frameworks */,
@@ -340,6 +344,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UUIDGenerator/UUIDGenerator-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -349,6 +354,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UUIDGenerator/UUIDGenerator-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -407,6 +413,7 @@
 				ABB6F7781925B519000FC943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB6F7791925B519000FC943 /* Build configuration list for PBXNativeTarget "UUIDGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +422,7 @@
 				ABB6F77B1925B519000FC943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
