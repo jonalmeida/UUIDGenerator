@@ -1,7 +1,9 @@
 UUID Generator
 ==============
 
-I was bored.
+UUID Generator in Objective-C
+
+I was bored..
 
 Getting started
 ---------------
