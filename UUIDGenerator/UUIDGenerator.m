@@ -13,7 +13,7 @@
 static NSString const *range = @"abcdef0123456789";
 static NSString const *small_range = @"89ab";
 
-- (UInt32) getRandomNum {
++ (UInt32) getRandomNum {
     UInt32 num;
     int result = SecRandomCopyBytes(kSecRandomDefault, sizeof(UInt32), (uint8_t*)&num);
     if(result != 0)
@@ -21,12 +21,12 @@ static NSString const *small_range = @"89ab";
     return num;
 }
 
-- (unichar) getRandomCharFromString:(NSString *)range {
++ (unichar) getRandomCharFromString:(NSString *)range {
     int rand_pos = [self getRandomNum] % ([range length]-1);
     return [range characterAtIndex:rand_pos];
 }
 
-- (NSString *) uuid4WithCaps:(Boolean)caps hypenated:(Boolean)hypen {
++ (NSString *) uuid4WithCaps:(Boolean)caps hypenated:(Boolean)hypen {
     NSMutableString *result_str = [[NSMutableString alloc] init];
 
     for(int i = 0; i < 32; i++) {

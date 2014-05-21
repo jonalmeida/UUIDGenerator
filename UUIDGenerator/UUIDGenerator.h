@@ -17,6 +17,6 @@
  *  @param hypen The UUID string with the 8-4-4-12 format
  *  @return Returns UUID as a string
  */
-- (NSString *) uuid4WithCaps:(Boolean)caps hypenated:(Boolean)hypen;
++ (NSString *) uuid4WithCaps:(Boolean)caps hypenated:(Boolean)hypen;
 
 @end

@@ -27,17 +27,15 @@
 
 - (void)testUUID4
 {
-    UUIDGenerator *u_generator = [[UUIDGenerator alloc] init];
-    NSLog(@"UUID4: %@", [u_generator uuid4WithCaps:false hypenated:false]);
-    NSLog(@"UUID4: %@", [u_generator uuid4WithCaps:true hypenated:false]);
-    NSLog(@"UUID4: %@", [u_generator uuid4WithCaps:false hypenated:true]);
-    NSLog(@"UUID4: %@", [u_generator uuid4WithCaps:true hypenated:true]);
+    NSLog(@"UUID4: %@", [UUIDGenerator uuid4WithCaps:false hypenated:false]);
+    NSLog(@"UUID4: %@", [UUIDGenerator uuid4WithCaps:true hypenated:false]);
+    NSLog(@"UUID4: %@", [UUIDGenerator uuid4WithCaps:false hypenated:true]);
+    NSLog(@"UUID4: %@", [UUIDGenerator uuid4WithCaps:true hypenated:true]);
 }
 
 - (void)testCorrectUUIDFormat
 {
-    UUIDGenerator *u_generator = [[UUIDGenerator alloc] init];
-    NSString *sample_uuid = [u_generator uuid4WithCaps:false hypenated:true];
+    NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:false hypenated:true];
     NSString *pattern = @"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
@@ -60,8 +58,7 @@
 
 - (void)testCorrectUUIDFormat2
 {
-    UUIDGenerator *u_generator = [[UUIDGenerator alloc] init];
-    NSString *sample_uuid = [u_generator uuid4WithCaps:true hypenated:true];
+    NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:true hypenated:true];
     NSString *pattern = @"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
@@ -84,8 +81,7 @@
 
 - (void)testCorrectUUIDFormat3
 {
-    UUIDGenerator *u_generator = [[UUIDGenerator alloc] init];
-    NSString *sample_uuid = [u_generator uuid4WithCaps:true hypenated:false];
+    NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:true hypenated:false];
     NSString *pattern = @"[0-9a-fA-F]{8}-?[0-9a-fA-F]{4}-?4[0-9a-fA-F]{3}-?[89abAB][0-9a-fA-F]{3}-?[0-9a-fA-F]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
@@ -108,8 +104,7 @@
 
 - (void)testCorrectUUIDFormat4
 {
-    UUIDGenerator *u_generator = [[UUIDGenerator alloc] init];
-    NSString *sample_uuid = [u_generator uuid4WithCaps:false hypenated:false];
+    NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:false hypenated:false];
     NSString *pattern = @"[0-9a-fA-F]{8}-?[0-9a-fA-F]{4}-?4[0-9a-fA-F]{3}-?[89abAB][0-9a-fA-F]{3}-?[0-9a-fA-F]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
