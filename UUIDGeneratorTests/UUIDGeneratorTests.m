@@ -36,7 +36,7 @@
 - (void)testCorrectUUIDFormat
 {
     NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:false hypenated:true];
-    NSString *pattern = @"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}";
+    NSString *pattern = @"[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
@@ -59,7 +59,7 @@
 - (void)testCorrectUUIDFormat2
 {
     NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:true hypenated:true];
-    NSString *pattern = @"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}";
+    NSString *pattern = @"[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
@@ -82,7 +82,7 @@
 - (void)testCorrectUUIDFormat3
 {
     NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:true hypenated:false];
-    NSString *pattern = @"[0-9a-fA-F]{8}-?[0-9a-fA-F]{4}-?4[0-9a-fA-F]{3}-?[89abAB][0-9a-fA-F]{3}-?[0-9a-fA-F]{12}";
+    NSString *pattern = @"[0-9A-F]{12}4[0-9A-F]{3}[89AB][0-9A-F]{15}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
@@ -105,7 +105,7 @@
 - (void)testCorrectUUIDFormat4
 {
     NSString *sample_uuid = [UUIDGenerator uuid4WithCaps:false hypenated:false];
-    NSString *pattern = @"[0-9a-fA-F]{8}-?[0-9a-fA-F]{4}-?4[0-9a-fA-F]{3}-?[89abAB][0-9a-fA-F]{3}-?[0-9a-fA-F]{12}";
+    NSString *pattern = @"[0-9a-f]{12}4[0-9a-f]{3}[89ab][0-9a-f]{15}";
     NSRange searchRange = NSMakeRange(0, [sample_uuid length]);
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:&error];
